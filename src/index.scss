@@ -35,4 +35,22 @@ h1 {
 // }
 
 
+//Nav
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  div {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+  }
+}
+
 //Hero section
+#hero {
+  display:flex;
+  flex-direction: column;
+}
+
