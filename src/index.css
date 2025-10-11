@@ -34,4 +34,25 @@ nav div {
 #hero {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  isolation: isolate;
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  margin-top: var(--nav-height, 80px);
+  overflow: hidden;
+}
+#hero .heroBg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+#hero .heroText {
+  position: relative;
+  z-index: 1;
 }/*# sourceMappingURL=index.css.map */
