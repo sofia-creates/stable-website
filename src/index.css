@@ -2,9 +2,7 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: rgba(54, 18, 1, 0.87);
 }
 
 body {
@@ -42,6 +40,8 @@ nav div {
   height: 70vh;
   margin-top: var(--nav-height, 80px);
   overflow: hidden;
+  color: white;
+  text-align: left;
 }
 #hero .heroBg {
   position: absolute;
@@ -55,4 +55,19 @@ nav div {
 #hero .heroText {
   position: relative;
   z-index: 1;
+}
+
+.crossroadsSection {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-around;
+}
+.crossroadsSection .crossroad {
+  padding: 0.8em;
+  border-radius: 8px;
+}
+
+footer {
+  color: white;
 }/*# sourceMappingURL=index.css.map */

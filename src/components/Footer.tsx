@@ -1,6 +1,11 @@
+import background from "../assets/tassilo-groper-1_IIeyBtXEk-unsplash.jpg"
+
+
 const Footer = () => {
   return (
-    <footer>
+    <footer
+    style = {{ backgroundImage: `url(${background})` }}
+    >
         <div>
             <h4>Sociala medier</h4>
             <p>Instagram: <a href="#">@solvallastall</a></p>
