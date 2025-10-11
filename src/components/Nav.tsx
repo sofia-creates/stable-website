@@ -1,7 +1,7 @@
 const Nav = () => {
   return (
     <nav>
-        <h2>Solvalla stall</h2>
+        <h2 className="brandNameText">Solvalla stall</h2>
 
         <div>
             <h2>Kontakt</h2>

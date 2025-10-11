@@ -19,7 +19,7 @@ const Hero = () => {
         poster={imagePath}
         />
         <div className="heroText">
-          <h1>Solvalla stall</h1>
+          <h1 className="brandNameText">Solvalla stall</h1>
           <h2>Ridlektioner & skogsturer</h2>
         </div>
     </header>
