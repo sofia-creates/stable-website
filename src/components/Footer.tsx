@@ -7,15 +7,15 @@ const Footer = () => {
     style = {{ backgroundImage: `url(${background})` }}
     >
         <div>
-            <h4>Sociala medier</h4>
+            <h3>Sociala medier</h3>
             <p>Instagram: <a href="#">@solvallastall</a></p>
             <p>Facebook: <a href="#">Solvalla stall</a></p>
         </div>
         <div>
-             <h4>Meny</h4>
-             <h3>Turer & priser</h3>
-             <h3>Våra hästar</h3>
-             <h3>Kontakt</h3>
+             <h3>Meny</h3>
+             <h4>Turer & priser</h4>
+             <h4>Våra hästar</h4>
+             <h4>Kontakt</h4>
         </div>
     </footer>
   )
