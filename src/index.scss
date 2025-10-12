@@ -1,6 +1,6 @@
 :root {
   // font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   // color-scheme: light dark;
@@ -25,17 +25,22 @@ h1 {
   line-height: 1.1;
 }
 
-// button {
-//   // border-radius: 8px;
-//   // border: 1px solid transparent;
-//   // padding: 0.6em 1.2em;
-//   // font-size: 1em;
-//   // font-weight: 500;
-//   // font-family: inherit;
-//   // background-color: #1a1a1a;
-//   // cursor: pointer;
-//   // transition: border-color 0.25s;
-// }
+a{
+  color: inherit;
+}
+
+button {
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-family: inherit;
+  font-weight: 600;
+  background-color: rgb(68, 124, 36);
+  color: white;
+  border: none;
+
+  cursor: pointer;
+}
 
 h2 {
   font-size: 1.2em;
@@ -97,32 +102,86 @@ nav {
   }
 }
 
+.imageAndTextSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+
+  padding: 2em;
+
+  img{
+    width: 30vw;
+    border-radius: 8px;
+  }
+
+  .IATSectionContent {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
 .crossroadsSection{
   display: flex;
   flex-direction: row;
-  align-items: baseline;
   justify-content:space-around;
+  margin: 4em 0;
 
+  
   .crossroad{
     padding: 0.8em;
     border-radius: 8px;
     width: 20%;
-    height: 5em;
+    height: 9em;
     
     display: flex;
     justify-content: center;
+    align-items: center;
+    
+    position: relative;
+    isolation: isolate; // creates its own stacking context
+    overflow: hidden;
 
-    color: white;
+    background-size: cover;
+    background-position: center;
+
+    
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      backdrop-filter: blur(2px);
+      background: rgba(45, 22, 0, 0.613);
+      border-radius: inherit;
+    }
+
+    h4{
+      color: white;
+      position: relative; // puts text above the overlay
+      z-index: 1;
+      font-size: 3em;
+      font-family: 'Oregano', cursive;    }
+
+
   }
 }
 
 
 footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 8%; 
+
   color: white;
   position: relative;      // <--- needed so ::before is inside footer
   isolation: isolate;      // creates a new stacking context
   overflow: hidden;        // avoid blurred edges showing outside
 
+  background-size: cover;
+  background-position: center;
   
   &::before {
     content: "";
@@ -131,7 +190,8 @@ footer {
     background-image: inherit; // uses same background
     background-size: inherit;
     background-position: inherit;
-    filter: blur(1.5px);
+    filter: blur(1px);
+    background: rgba(45, 22, 0, 0.686);
     transform: scale(1.05); // prevents visible edges from blur shrink
     z-index: 0;
   }

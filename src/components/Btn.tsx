@@ -1,6 +1,10 @@
-const Btn = () => {
+interface BtnProps{
+  title?: string;
+}
+
+const Btn = ({title = "Kontakta oss"}:BtnProps) => {
   return (
-    <div>Btn</div>
+    <button >{title}</button>
   )
 }
 

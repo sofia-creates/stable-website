@@ -1,5 +1,5 @@
 :root {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color: rgba(31, 11, 2, 0.87);
@@ -19,6 +19,22 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-family: inherit;
+  font-weight: 600;
+  background-color: rgb(68, 124, 36);
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
 h2 {
@@ -71,27 +87,71 @@ nav div {
   z-index: 1;
 }
 
+.imageAndTextSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  padding: 2em;
+}
+.imageAndTextSection img {
+  width: 30vw;
+  border-radius: 8px;
+}
+.imageAndTextSection .IATSectionContent {
+  display: flex;
+  flex-direction: column;
+}
+
 .crossroadsSection {
   display: flex;
   flex-direction: row;
-  align-items: baseline;
   justify-content: space-around;
+  margin: 4em 0;
 }
 .crossroadsSection .crossroad {
   padding: 0.8em;
   border-radius: 8px;
   width: 20%;
-  height: 5em;
+  height: 9em;
   display: flex;
   justify-content: center;
+  align-items: center;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+.crossroadsSection .crossroad::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  background: rgba(45, 22, 0, 0.613);
+  border-radius: inherit;
+}
+.crossroadsSection .crossroad h4 {
   color: white;
+  position: relative;
+  z-index: 1;
+  font-size: 3em;
+  font-family: "Oregano", cursive;
 }
 
 footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 8%;
   color: white;
   position: relative;
   isolation: isolate;
   overflow: hidden;
+  background-size: cover;
+  background-position: center;
   /* make sure children render above the blurred pseudo-element */
 }
 footer::before {
@@ -101,7 +161,8 @@ footer::before {
   background-image: inherit;
   background-size: inherit;
   background-position: inherit;
-  filter: blur(1.5px);
+  filter: blur(1px);
+  background: rgba(45, 22, 0, 0.686);
   transform: scale(1.05);
   z-index: 0;
 }
