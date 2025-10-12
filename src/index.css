@@ -85,4 +85,23 @@ nav div {
 
 footer {
   color: white;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  /* make sure children render above the blurred pseudo-element */
+}
+footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: inherit;
+  background-size: inherit;
+  background-position: inherit;
+  filter: blur(1.5px);
+  transform: scale(1.05);
+  z-index: 0;
+}
+footer > * {
+  position: relative;
+  z-index: 1;
 }/*# sourceMappingURL=index.css.map */

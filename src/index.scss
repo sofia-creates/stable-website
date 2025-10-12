@@ -113,4 +113,27 @@ nav {
 
 footer {
   color: white;
+  position: relative;      // <--- needed so ::before is inside footer
+  isolation: isolate;      // creates a new stacking context
+  overflow: hidden;        // avoid blurred edges showing outside
+
+  
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: inherit; // uses same background
+    background-size: inherit;
+    background-position: inherit;
+    filter: blur(1.5px);
+    transform: scale(1.05); // prevents visible edges from blur shrink
+    z-index: 0;
+  }
+
+   /* make sure children render above the blurred pseudo-element */
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+
 }
