@@ -89,7 +89,7 @@ nav div {
 
 .imageAndTextSection {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2em;
@@ -102,6 +102,11 @@ nav div {
 .imageAndTextSection .IATSectionContent {
   display: flex;
   flex-direction: column;
+}
+@media (min-width: 768px) {
+  .imageAndTextSection {
+    flex-direction: row;
+  }
 }
 
 .crossroadsSection {
@@ -169,4 +174,11 @@ footer::before {
 footer > * {
   position: relative;
   z-index: 1;
+}
+footer p {
+  display: flex;
+  align-items: center;
+}
+footer p .footerLogo {
+  height: 1.5em;
 }/*# sourceMappingURL=index.css.map */

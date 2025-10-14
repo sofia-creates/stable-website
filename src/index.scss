@@ -104,7 +104,7 @@ nav {
 
 .imageAndTextSection {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2em;
@@ -119,6 +119,10 @@ nav {
   .IATSectionContent {
     display: flex;
     flex-direction: column;
+  }
+
+  @media (min-width: 768px){
+    flex-direction: row;
   }
 }
 
@@ -202,4 +206,13 @@ footer {
     z-index: 1;
   }
 
+
+  p {
+    display: flex;
+    align-items: center;
+
+    .footerLogo {
+      height: 1.5em;
+    }
+  }
 }

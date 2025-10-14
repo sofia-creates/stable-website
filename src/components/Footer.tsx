@@ -1,4 +1,6 @@
 import background from "../assets/tassilo-groper-1_IIeyBtXEk-unsplash.jpg"
+import instaLogo from "../assets/square-instagram-brands-solid-full-white.svg"
+import fbLogo from "../assets/square-facebook-brands-solid-full-white.svg"
 
 
 const Footer = () => {
@@ -8,8 +10,13 @@ const Footer = () => {
     >
         <div>
             <h3>Sociala medier</h3>
-            <p>Instagram: <a href="#">@solvallastall</a></p>
-            <p>Facebook: <a href="#">Solvalla stall</a></p>
+            <p>
+              <img className="footerLogo" src={instaLogo} alt="Instagram logotype"/> 
+              <a href="#">@solvallastall</a></p>
+            <p> 
+              <img className="footerLogo" src={fbLogo} alt="Facebook logotype"/> 
+              <a href="#">Solvalla stall</a>
+            </p>
         </div>
         <div>
              <h3>Meny</h3>
