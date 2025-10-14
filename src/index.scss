@@ -53,17 +53,68 @@ h2 {
 //Nav
 nav {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  padding:  2% 5% 2% 5%;
-  gap: 1em;
+  align-items: center;
+  padding: 2% 5%;
+  position: relative;
 
-  div {
+  .navLinks {
     display: flex;
-    flex-direction: row;
-    gap: 1em;
+    gap: 1.5rem;
+  }
+
+  .hamburgerMenu {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .mobileMenuWrapper {
+    position: relative;
+  }
+
+  .mobileDropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(45, 22, 0, 0.9);
+    border-radius: 8px;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    z-index: 5;
+    animation: fadeIn 0.2s ease-in-out;
+  }
+
+  .mobileDropdown h2 {
+    margin: 0;
+    color: white;
+    cursor: pointer;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  // Desktop / mobile visibility
+  @media (max-width: 768px) {
+    .navLinks {
+      display: none;
+    }
   }
 }
+
+
 
 //Hero section
 #hero {
