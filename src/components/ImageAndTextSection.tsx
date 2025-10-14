@@ -7,7 +7,7 @@ const ImageAndTextSection = () => {
         <img src={imagePath} alt="" />
         <div className="IATSectionContent">
           <h3>Om oss</h3>
-          <p>jfvhkodjvgnbrf ekf ojerjorfn efne fefj jr j j j j jf jifiknlgj jrbojek wjopjwe lfdnven</p>
+          <p>jfvhkod jvgnbrf ekf ojerjorfn efne fefj jr jjjjf jifiknlgj jrbojek wjopjwe lfdnven</p>
           <Btn></Btn>
         </div>
     </section>

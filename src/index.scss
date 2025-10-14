@@ -21,8 +21,14 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 5.5em;
   line-height: 1.1;
+  margin: 0;
+}
+
+h3{
+  font-size: 3.5em;
+  margin:0;
 }
 
 a{
@@ -30,6 +36,7 @@ a{
 }
 
 button {
+  width: fit-content;
   border-radius: 8px;
   padding: 0.6em 1.2em;
   font-size: 1em;
@@ -42,12 +49,12 @@ button {
   cursor: pointer;
 }
 
-h2 {
-  font-size: 1.2em;
-}
+// h2 {
+//   font-size: 1.2em;
+// }
 
 .brandNameText , h1, h2 , h3 {
-  font-family: 'Oregano', cursive;
+  font-family: 'Cookie', cursive;
 }
 
 //Nav
@@ -55,9 +62,12 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2% 5%;
+  padding: 0 2%;
   position: relative;
 
+  .brandNameText{
+    font-size: 2em;
+  }
   .navLinks {
     display: flex;
     gap: 1.5rem;
@@ -84,7 +94,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 1.3rem;
     z-index: 5;
     animation: fadeIn 0.2s ease-in-out;
   }
@@ -92,6 +102,7 @@ nav {
   .mobileDropdown h2 {
     margin: 0;
     color: white;
+    font-family: inherit;
     cursor: pointer;
   }
 
@@ -108,6 +119,8 @@ nav {
 
   // Desktop / mobile visibility
   @media (max-width: 768px) {
+    padding: 0 5%;
+
     .navLinks {
       display: none;
     }
@@ -151,6 +164,10 @@ nav {
     position: relative;
     z-index:1;
   }
+
+  h2 {
+    font-size: 2em;
+  }
 }
 
 .imageAndTextSection {
@@ -158,22 +175,30 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2em;
+  gap: 1em;
+  text-align: center;
 
   padding: 2em;
 
   img{
-    width: 30vw;
+    width: 100%;
     border-radius: 8px;
   }
 
   .IATSectionContent {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
   @media (min-width: 768px){
     flex-direction: row;
+    text-align: left;
+    gap: 2em;
+
+    img{
+      width: 30vw;
+    }
   }
 }
 
@@ -194,6 +219,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     
     position: relative;
     isolation: isolate; // creates its own stacking context
@@ -207,7 +233,7 @@ nav {
       content: "";
       position: absolute;
       inset: 0;
-      backdrop-filter: blur(2px);
+      backdrop-filter: blur(1px);
       background: rgba(45, 22, 0, 0.613);
       border-radius: inherit;
     }
@@ -216,8 +242,8 @@ nav {
       color: white;
       position: relative; // puts text above the overlay
       z-index: 1;
-      font-size: 3em;
-      font-family: 'Oregano', cursive;    }
+      font-size: 1.8em;
+      font-family: 'Cookie', cursive;    }
 
 
   }
@@ -228,7 +254,8 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 8%; 
+  padding: 14% 8%; 
+  margin-top: 2em;
 
   color: white;
   position: relative;      // <--- needed so ::before is inside footer
@@ -257,6 +284,9 @@ footer {
     z-index: 1;
   }
 
+  h3{
+    font-size: 2em;
+  }
 
   p {
     display: flex;
@@ -266,4 +296,5 @@ footer {
       height: 1.5em;
     }
   }
+
 }
