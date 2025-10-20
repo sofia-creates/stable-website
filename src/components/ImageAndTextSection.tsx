@@ -1,14 +1,21 @@
 import Btn from "./Btn"
 import imagePath from "../assets/raphael-wicker-P6JRr7-FxLw-unsplash.jpg"
 
-const ImageAndTextSection = () => {
+interface ImageAndTextSectionProps {
+  image?: string;
+  textContent?: string;
+}
+
+let defaultParagraph = "Solvalla Stall är ett familjärt stall på landet där gemenskap, glädje och omtanke om hästarna står i centrum. Vi erbjuder ridlektioner för alla nivåer, härliga skogsturer i natursköna omgivningar och en trygg miljö där både ryttare och hästar trivs."
+
+const ImageAndTextSection = ({image = imagePath , textContent=defaultParagraph}:ImageAndTextSectionProps) => {
   return (
     <section className="imageAndTextSection">
-        <img src={imagePath} alt="" />
+        <img src={image} alt="" />
         <div className="IATSectionContent">
           <h3>Om oss</h3>
-          <p>jfvhkod jvgnbrf ekf ojerjorfn efne fefj jr jjjjf jifiknlgj jrbojek wjopjwe lfdnven</p>
-          <Btn></Btn>
+          <p>{textContent}</p>
+          <Btn/>
         </div>
     </section>
   )
