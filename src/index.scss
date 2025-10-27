@@ -7,6 +7,10 @@
   color: rgba(31, 11, 2, 0.87);
   // background-color: #391802;
   margin: 0 auto; 
+
+  //   display: flex;
+  // justify-content: center;
+  // align-items: center;
 }
 
 html, body {
@@ -19,6 +23,8 @@ body {
   min-width: 320px;
   min-height: 100vh;
   width: 100%;
+
+  background-color: rgb(254, 242, 230);
 }
 
 h1 {
@@ -164,6 +170,7 @@ nav {
   .heroText {
     position: relative;
     z-index:1;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
   }
 
   h2 {
@@ -178,8 +185,11 @@ nav {
   align-items: center;
   gap: 1em;
   text-align: center;
+  box-shadow: 2px 2px 8px rgba(45, 22, 0, 0.2);
 
+  border-radius: 4px;
   padding: 2em;
+  margin: 2% auto;
 
   img{
     width: 100%;
@@ -189,7 +199,7 @@ nav {
   .IATSectionContent {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
   }
 
   @media (min-width: 768px){
@@ -197,7 +207,8 @@ nav {
     text-align: left;
     gap: 2em;
     width: 60%;
-    background-color: rgb(254, 242, 230);
+    // background-color: rgb(254, 242, 230);
+    background-color: white;
 
     img{
       width: 50%;
