@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import {Link} from "react-router-dom"
 import hamburgerMenu from "../assets/hamburger-menu-bars-icon.svg";
 import closeIcon from "../assets/xmark-solid-full.svg"
 
@@ -19,14 +20,22 @@ const Nav = () => {
 
   return (
     <nav>
-      <h2 className="brandNameText">Solvalla stall</h2>
+      <Link to="/">
+       <h2 className="brandNameText">Solvalla stall</h2>
+      </Link>
 
       {/* Desktop links */}
       {!isMobile && (
         <div className="navLinks">
-          <h2>Kontakt</h2>
-          <h2>Turer & priser</h2>
-          <h2>Våra hästar</h2>
+          <Link to="/contact">
+            <h2>Kontakt</h2>
+          </Link>
+          <Link to="/tours-and-prices">
+            <h2>Turer & priser</h2>
+          </Link>
+          <Link to="/our-horses">
+            <h2>Våra hästar</h2>
+          </Link>
         </div>
       )}
 
@@ -43,9 +52,15 @@ const Nav = () => {
           {/* Dropdown menu */}
           {menuOpen && (
             <div className="mobileDropdown">
-              <h2>Kontakt</h2>
-              <h2>Turer & priser</h2>
-              <h2>Våra hästar</h2>
+              <Link to="/contact">
+                <h2>Kontakt</h2>
+              </Link>
+              <Link to="/tours-and-prices">
+                <h2>Turer & priser</h2>
+              </Link>
+              <Link to="/our-horses">
+                <h2>Våra hästar</h2>
+              </Link>
             </div>
           )}
         </div>

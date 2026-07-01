@@ -1,4 +1,3 @@
-import Nav from "../components/Nav"
 import Hero from "../components/Hero"
 import ImageAndTextSection from "../components/ImageAndTextSection"
 import Footer from "../components/Footer"
@@ -25,7 +24,6 @@ const HomePage = () => {
 
   return (
     <>
-        <Nav/>
         <Hero/>
         <ImageAndTextSection/>
         <CrossroadSection crossroads={crossroadsData}/>
