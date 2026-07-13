@@ -1,4 +1,5 @@
 import ImageAndTextSection from "../components/ImageAndTextSection";
+import {Link} from "react-router-dom"
 import Footer from "../components/Footer";
 
 const ToursAndPricesPage = () => {
@@ -10,6 +11,7 @@ const ToursAndPricesPage = () => {
         <ImageAndTextSection title="Korta turer"/>
         <ImageAndTextSection title="B&B paket"/>
         <ImageAndTextSection title="Event"/>
+        <button><Link to="/contact">Kontakta oss!</Link></button>
         <Footer/>
     </>
   )
